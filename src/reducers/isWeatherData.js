@@ -1,18 +1,18 @@
-const initialState = {
-    name: '',
-    temp: '',
-};
+const initialState = [
+];
 
 const  weatherReducer = (state = initialState, action)=> {
     switch (action.type) {
-        case 'SET_NAME':
-            return {
-                name: action.nameCity
-            };
-        case 'SET_TEMP':
-            return {
-                temp: action.tempCity
-            };
+        case 'ADD_HISTORY':
+            return [
+                ...state,
+                {
+                    id: action.id,
+                    name: action.nameCity,
+                    temp: action.tempCity,
+                    description: action.descriptionCity
+                }
+            ];
         default:
             return state;
     }

@@ -1,13 +1,9 @@
-export function setTemp(temp) {
+export function addHistory(id, name, temp, description) {
     return {
-        type: 'SET_TEMP',
-        tempCity: temp
-    };
-}
-
-export function setName(name) {
-    return {
-        type: 'SET_NAME',
-        nameCity: name
+        type: 'ADD_HISTORY',
+        id: id,
+        nameCity: name,
+        tempCity: temp,
+        descriptionCity: description
     };
 }
